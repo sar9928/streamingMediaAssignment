@@ -8,13 +8,4 @@ const getIndex = (request, response) => {
   response.end();
 };
 
-const index2 = fs.readFileSync(`${__dirname}/../client/client2.html`);
-
-const getIndex2 = (request, response) => {
-  response.writeHead(200, { 'Content-Type': 'audio/mpeg' });
-  response.write(index2);
-  response.end();
-};
-
 module.exports.getIndex = getIndex;
-module.exports.getIndex2 = getIndex2;
